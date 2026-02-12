@@ -109,6 +109,7 @@ The project includes an interactive Streamlit dashboard with the following funct
 adult-income-ml-streamlit/
 │
 ├── app.py
+├── adult.csv
 ├── train_models.py
 ├── preprocess.py
 ├── requirements.txt
