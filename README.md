@@ -114,7 +114,6 @@ adult-income-ml-streamlit/
 ├── preprocess.py
 ├── requirements.txt
 ├── README.md
-├── sample_test_data.csv
 │
 └── models/
     ├── logistic.pkl
