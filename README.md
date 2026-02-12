@@ -103,6 +103,9 @@ The project includes an interactive Streamlit dashboard with the following funct
 ---
 
 ## Project Folder Structure
+## Project Folder Structure
+
+```
 adult-income-ml-streamlit/
 │
 ├── app.py
@@ -113,11 +116,13 @@ adult-income-ml-streamlit/
 ├── sample_test_data.csv
 │
 └── models/
-├── logistic.pkl
-├── decision_tree.pkl
-├── knn.pkl
-├── naive_bayes.pkl
-├── random_forest.pkl
-├── xgboost.pkl
-├── scaler.pkl
-└── encoders.pkl
+    ├── logistic.pkl
+    ├── decision_tree.pkl
+    ├── knn.pkl
+    ├── naive_bayes.pkl
+    ├── random_forest.pkl
+    ├── xgboost.pkl
+    ├── scaler.pkl
+    └── encoders.pkl
+```
+
