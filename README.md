@@ -1,115 +1,123 @@
-# 📊 Adult Income Classification Dashboard (Streamlit + Machine Learning)
-
-## 🔹 Problem Statement
-
-The objective of this project is to develop and compare multiple machine learning classification models to predict whether an individual earns more than $50K annually based on demographic and employment-related attributes.
-
-This project demonstrates an end-to-end Machine Learning workflow including data preprocessing, model training, evaluation, visualization, and deployment using Streamlit.
+# Adult Income Classification using Machine Learning and Streamlit
 
 ---
 
-## 🔹 Dataset Description
+## a. Problem Statement
 
-The dataset used in this project is the **Adult Income Dataset** obtained from public repositories (UCI ML Repository / Kaggle).
+The objective of this project is to develop and compare multiple Machine Learning classification models to predict whether an individual earns more than 50K annually based on demographic and employment-related attributes.
 
-### Dataset Details:
+The project demonstrates a complete Machine Learning pipeline including data preprocessing, model training, evaluation, visualization, and deployment using an interactive Streamlit web application.
 
-- Total Instances: 48,842  
-- Number of Features: 14  
-- Problem Type: Binary Classification  
-- Target Variable: Income  
-  - <=50K
-  - >50K  
+---
 
-### Feature Examples:
+## b. Dataset Description
 
+The dataset used in this project is the **Adult Income Dataset**, obtained from public repositories such as Kaggle and UCI Machine Learning Repository.
+
+### Dataset Characteristics
+
+- Problem Type: Binary Classification
+- Number of Instances: 48,842
+- Number of Features: 14
+- Target Variable: Income Category
+
+### Target Classes:
+- <=50K
+- >50K
+
+### Features Include:
 - Age
 - Workclass
 - Education
-- Occupation
 - Marital Status
+- Occupation
+- Relationship
+- Race
+- Sex
 - Capital Gain
 - Capital Loss
-- Hours Per Week
+- Hours per Week
 - Native Country
 
----
-
-## 🔹 Machine Learning Models Implemented
-
-The following classification models were implemented and evaluated on the same dataset:
-
-1. Logistic Regression  
-2. Decision Tree Classifier  
-3. K-Nearest Neighbors (KNN)  
-4. Naive Bayes (Gaussian)  
-5. Random Forest (Ensemble Model)  
-6. XGBoost (Ensemble Boosting Model)
+The dataset contains both categorical and numerical features. Label encoding and feature scaling were applied during preprocessing.
 
 ---
 
-## 🔹 Evaluation Metrics
+## c. Models Used
 
-Each model was evaluated using the following performance metrics:
+The following six classification models were implemented and evaluated on the same dataset:
 
-- Accuracy
-- AUC Score
-- Precision
-- Recall
-- F1 Score
-- Matthews Correlation Coefficient (MCC)
-
----
-
-## 🔹 Model Performance Comparison
-
-| ML Model | Accuracy | AUC | Precision | Recall | F1 Score | MCC |
-|----------|-----------|------|------------|----------|------------|------|
-| Logistic Regression | (Add Output) |
-| Decision Tree | (Add Output) |
-| KNN | (Add Output) |
-| Naive Bayes | (Add Output) |
-| Random Forest | (Add Output) |
-| XGBoost | (Add Output) |
-
-*(Values obtained from model training output)*
+1. Logistic Regression
+2. Decision Tree Classifier
+3. K-Nearest Neighbor Classifier
+4. Naive Bayes Classifier (Gaussian)
+5. Random Forest (Ensemble Model)
+6. XGBoost (Ensemble Model)
 
 ---
 
-## 🔹 Model Performance Observations
+## Model Comparison Table
 
-| Model | Observation |
-|----------|--------------|
-| Logistic Regression | Performs well for linearly separable relationships and provides stable baseline performance. |
-| Decision Tree | Easy to interpret but prone to overfitting on training data. |
-| KNN | Sensitive to feature scaling and computationally intensive for large datasets. |
-| Naive Bayes | Fast and efficient but assumes independence between features. |
-| Random Forest | Provides strong accuracy and reduces overfitting using ensemble learning. |
-| XGBoost | Produces high performance using gradient boosting and regularization techniques. |
+| ML Model Name | Accuracy | AUC Score | Precision | Recall | F1 Score | MCC |
+|--------------|----------|-----------|-----------|--------|----------|-----|
+| Logistic Regression | (Add Value) | (Add Value) | (Add Value) | (Add Value) | (Add Value) | (Add Value) |
+| Decision Tree | (Add Value) | (Add Value) | (Add Value) | (Add Value) | (Add Value) | (Add Value) |
+| KNN | (Add Value) | (Add Value) | (Add Value) | (Add Value) | (Add Value) | (Add Value) |
+| Naive Bayes | (Add Value) | (Add Value) | (Add Value) | (Add Value) | (Add Value) | (Add Value) |
+| Random Forest (Ensemble) | (Add Value) | (Add Value) | (Add Value) | (Add Value) | (Add Value) | (Add Value) |
+| XGBoost (Ensemble) | (Add Value) | (Add Value) | (Add Value) | (Add Value) | (Add Value) | (Add Value) |
+
+*Values were obtained after evaluating trained models on the test dataset.*
 
 ---
 
-## 🔹 Streamlit Application Features
+## Model Performance Observations
 
-The interactive Streamlit dashboard provides the following user-friendly features:
+| ML Model Name | Observation about Model Performance |
+|--------------|-------------------------------------|
+| Logistic Regression | Provides stable baseline performance and works well when relationship between features and target is linear. |
+| Decision Tree | Highly interpretable model but prone to overfitting if tree depth is large. |
+| KNN | Performance depends heavily on feature scaling and can be computationally expensive for large datasets. |
+| Naive Bayes | Fast and efficient but assumes independence among features which may reduce performance in complex datasets. |
+| Random Forest (Ensemble) | Provides high accuracy and reduces overfitting by combining multiple decision trees. |
+| XGBoost (Ensemble) | Achieves strong performance using gradient boosting and regularization, generally providing the best overall results. |
 
-### 📌 Sidebar Controls
+---
+
+## Streamlit Application Features
+
+The project includes an interactive Streamlit dashboard with the following functionalities:
+
+### Sidebar Features:
 - Dataset download option
-- CSV test dataset upload
-- Machine learning model selection
+- CSV dataset upload functionality
+- Machine Learning model selection dropdown
 
-### 📊 Visualization Features
-- Dataset preview section
+### Visualization and Output Features:
+- Dataset preview display
 - Performance summary metrics (Accuracy, Precision, Recall, F1 Score)
-- Detailed classification report table
-- Confusion matrix heatmap visualization
-
-### 📥 Additional Functionalities
-- Download prediction results as CSV
-- Interactive expandable sections
-- Real-time prediction processing
+- Detailed classification report displayed in table format
+- Confusion matrix displayed using heatmap visualization
+- Prediction results download option
 
 ---
 
-## 🔹 Project Folder Structure
-
+## Project Folder Structure
+adult-income-ml-streamlit/
+│
+├── app.py
+├── train_models.py
+├── preprocess.py
+├── requirements.txt
+├── README.md
+├── sample_test_data.csv
+│
+└── models/
+├── logistic.pkl
+├── decision_tree.pkl
+├── knn.pkl
+├── naive_bayes.pkl
+├── random_forest.pkl
+├── xgboost.pkl
+├── scaler.pkl
+└── encoders.pkl
